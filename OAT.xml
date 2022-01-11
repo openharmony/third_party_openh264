@@ -314,7 +314,7 @@ Note:If the text contains special characters, please escape them according to th
         <policyitem type="compatibility" name="InvalidLicense" path="codec/processing/src/scenechangedetection/SceneChangeDetection.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/common/inc/WelsLock.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/common/inc/macros.h" desc="the License of this file is BSD-2-Clause"/>
-        <policyitem type="compatibility" name="InvalidLicense" path="codec/common/mips/satd_sad_mmi.c" desc="the License of this file is BSD-2-Clause"/>                                        
+        <policyitem type="compatibility" name="InvalidLicense" path="codec/common/mips/satd_sad_mmi.c" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/common/src/utils.cpp" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/decoder/core/inc/decode_slice.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/decoder/core/inc/parse_mb_syn_cavlc.h" desc="the License of this file is BSD-2-Clause"/>
@@ -336,7 +336,7 @@ Note:If the text contains special characters, please escape them according to th
         <policyitem type="compatibility" name="InvalidLicense" path="codec/decoder/core/inc/decoder.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/decoder/core/inc/pic_queue.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/decoder/core/src/decoder.cpp" desc="the License of this file is BSD-2-Clause"/>
-        <policyitem type="compatibility" name="InvalidLicense" path="codec/encoder/core/arm64/intra_pred_aarch64_neon.S" desc="the License of this file is BSD-2-Clause"/>  
+        <policyitem type="compatibility" name="InvalidLicense" path="codec/encoder/core/arm64/intra_pred_aarch64_neon.S" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/encoder/core/inc/get_intra_predictor.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/encoder/core/inc/slice.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/encoder/core/inc/wels_const.h" desc="the License of this file is BSD-2-Clause"/>
@@ -347,9 +347,9 @@ Note:If the text contains special characters, please escape them according to th
         <policyitem type="compatibility" name="InvalidLicense" path="codec/processing/src/backgrounddetection/BackgroundDetection.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/processing/src/denoise/denoise.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/processing/src/scrolldetection/ScrollDetection.cpp" desc="the License of this file is BSD-2-Clause"/>
-        <policyitem type="compatibility" name="MPL-2.0" path="module/task_utils.py" desc="use MPL-2.0  0"/>
-        <policyitem type="compatibility" name="MPL-2.0" path="module/task_utils_generated.h" desc="use MPL-2.0  0"/>
-        <policyitem type="compatibility" name="MPL-2.0" path="module/task_utils.h" desc="use MPL-2.0  0"/>
+        <policyitem type="compatibility" name="MPL-2.0" path="module/task_utils.py" desc="it is a plugin for FireFox. can ignore it if you just want to use openh264 codec"/>
+        <policyitem type="compatibility" name="MPL-2.0" path="module/task_utils_generated.h" desc="it is a plugin for FireFox. can ignore it if you just want to use openh264 codec"/>
+        <policyitem type="compatibility" name="MPL-2.0" path="module/task_utils.h" desc="it is a plugin for FireFox. can ignore it if you just want to use openh264 codec"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/common/arm/copy_mb_neon.S" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/common/inc/WelsTaskThread.h" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/common/inc/measure_time.h" desc="the License of this file is BSD-2-Clause"/>
@@ -364,9 +364,9 @@ Note:If the text contains special characters, please escape them according to th
         <policyitem type="compatibility" name="InvalidLicense" path="codec/encoder/core/src/encoder_data_tables.cpp" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/encoder/core/src/svc_encode_mb.cpp" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/encoder/core/x86/quant.asm" desc="the License of this file is BSD-2-Clause"/>
-        <policyitem type="compatibility" name="InvalidLicense" path="codec/processing/src/denoise/denoise_filter.cpp" desc="the License of this file is BSD-2-Clause"/>   
+        <policyitem type="compatibility" name="InvalidLicense" path="codec/processing/src/denoise/denoise_filter.cpp" desc="the License of this file is BSD-2-Clause"/>
         <policyitem type="compatibility" name="InvalidLicense" path="codec/processing/src/scrolldetection/ScrollDetection.h" desc="the License of this file is BSD-2-Clause"/>
-        <policyitem type="compatibility" name="InvalidLicense" path="docs/doxygen/Doxyfile" desc="the License of this file is BSD-2-Clause"/>                                    
+        <policyitem type="compatibility" name="InvalidLicense" path="docs/doxygen/Doxyfile" desc="the License of this file is BSD-2-Clause"/>
             </policy>
         </policylist>
     </oatconfig>
