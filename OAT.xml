@@ -64,6 +64,8 @@ Note:If the text contains special characters, please escape them according to th
             <policyitem type="compatibility" name="MPL-2.0" path="module/task_utils.h" desc="it is a plugin for FireFox. can ignore it if you just want to use openh264 codec"/>
             <policyitem type="compatibility" name="InvalidLicense" path="docs/doxygen/Home.rest" desc="docs file, don't need lincese"/>
             <policyitem type="compatibility" name="InvalidLicense" path="docs/doxygen/Doxyfile" desc="docs file, don't need lincese"/>
+            <policyitem type="filepath" name="test/.*" desc="test file, don't need lincese"/>
+            <policyitem type="filepath" name="autotest/.*" desc="autotest file, don't need lincese"/>
             </policy>
         </policylist>
         <licensematcherlist>
