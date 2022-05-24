@@ -66,18 +66,49 @@ COMMON_OBJS += $(COMMON_OBJSARM64)
 endif
 OBJS += $(COMMON_OBJSARM64)
 
-COMMON_ASM_MIPS_SRCS=\
+COMMON_ASM_MIPS_MMI_SRCS=\
 	$(COMMON_SRCDIR)/mips/copy_mb_mmi.c\
 	$(COMMON_SRCDIR)/mips/deblock_mmi.c\
 	$(COMMON_SRCDIR)/mips/expand_picture_mmi.c\
 	$(COMMON_SRCDIR)/mips/intra_pred_com_mmi.c\
 	$(COMMON_SRCDIR)/mips/satd_sad_mmi.c\
 
-COMMON_OBJSMIPS += $(COMMON_ASM_MIPS_SRCS:.c=.$(OBJ))
+COMMON_OBJSMIPS_MMI += $(COMMON_ASM_MIPS_MMI_SRCS:.c=.$(OBJ))
+
+COMMON_ASM_MIPS_MSA_SRCS=\
+	$(COMMON_SRCDIR)/mips/copy_mb_msa.c\
+	$(COMMON_SRCDIR)/mips/deblock_msa.c\
+
+COMMON_OBJSMIPS_MSA += $(COMMON_ASM_MIPS_MSA_SRCS:.c=.$(OBJ))
 ifeq ($(ASM_ARCH), mips)
-COMMON_OBJS += $(COMMON_OBJSMIPS)
+ifeq ($(ENABLE_MMI), Yes)
+COMMON_OBJS += $(COMMON_OBJSMIPS_MMI)
 endif
-OBJS += $(COMMON_OBJSMIPS)
+ifeq ($(ENABLE_MSA), Yes)
+COMMON_OBJS += $(COMMON_OBJSMIPS_MSA)
+endif
+endif
+OBJS += $(COMMON_OBJSMIPS_MMI)
+OBJS += $(COMMON_OBJSMIPS_MSA)
+
+COMMON_ASM_LOONGARCH_LSX_SRCS=\
+	$(COMMON_SRCDIR)/loongarch/mc_chroma_lsx.c\
+        $(COMMON_SRCDIR)/loongarch/copy_mb_lsx.c\
+
+COMMON_OBJSLOONGARCH_LSX += $(COMMON_ASM_LOONGARCH_LSX_SRCS:.c=.$(OBJ))
+
+COMMON_ASM_LOONGARCH_LASX_SRCS=\
+        $(COMMON_SRCDIR)/loongarch/satd_sad_lasx.c\
+
+COMMON_OBJSLOONGARCH_LASX += $(COMMON_ASM_LOONGARCH_LASX_SRCS:.c=.$(OBJ))
+ifeq ($(ASM_ARCH), loongarch)
+ifeq ($(ENABLE_LSX), Yes)
+COMMON_OBJS += $(COMMON_OBJSLOONGARCH_LSX)
+endif
+ifeq ($(ENABLE_LASX), Yes)
+COMMON_OBJS += $(COMMON_OBJSLOONGARCH_LASX)
+endif
+endif
 
 OBJS += $(COMMON_OBJS)
 
