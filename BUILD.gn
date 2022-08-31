@@ -34,8 +34,8 @@ ohos_shared_library("openh264") {
     "//third_party/gstreamer/gstreamer:gstbase",
     "//third_party/gstreamer/gstreamer:gstreamer",
   ]
-  part_name = "multimedia_player_framework"
-  subsystem_name = "multimedia"
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
 }
 
 ohos_static_library("encoder") {
@@ -108,8 +108,8 @@ ohos_static_library("encoder") {
     "//third_party/gstreamer/gstreamer:gstreamer",
   ]
 
-  subsystem_name = "multimedia"
-  part_name = "multimedia_player_framework"
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
 }
 
 ohos_static_library("decoder") {
@@ -170,8 +170,8 @@ ohos_static_library("decoder") {
     "//third_party/gstreamer/gstreamer:gstreamer",
   ]
 
-  subsystem_name = "multimedia"
-  part_name = "multimedia_player_framework"
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
 }
 
 ohos_static_library("console_common") {
@@ -201,8 +201,8 @@ ohos_static_library("console_common") {
     "//third_party/gstreamer/gstreamer:gstreamer",
   ]
 
-  subsystem_name = "multimedia"
-  part_name = "multimedia_player_framework"
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
 }
 
 ohos_static_library("processing") {
@@ -254,8 +254,8 @@ ohos_static_library("processing") {
     "//third_party/gstreamer/gstreamer:gstreamer",
   ]
 
-  subsystem_name = "multimedia"
-  part_name = "multimedia_player_framework"
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
 }
 
 ohos_static_library("common") {
@@ -300,6 +300,6 @@ ohos_static_library("common") {
     "//third_party/gstreamer/gstreamer:gstreamer",
   ]
 
-  subsystem_name = "multimedia"
-  part_name = "multimedia_player_framework"
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
 }
