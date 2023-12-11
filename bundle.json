@@ -1,0 +1,37 @@
+{
+  "name": "@ohos/openh264",
+  "description": "Library which supports H.264 encoding and decoding",
+  "version": "2.4.1",
+  "license": "BSD 2-clause 'Simplified' License",
+  "publishAs": "code-segment",
+  "segment": {
+    "destPath": "third_party/openh264"
+  },
+  "dirs": {},
+  "scripts": {},
+  "licensePath": "LICENSE",
+  "readmePath": {
+    "en": "README"
+  },
+  "component": {
+    "name": "openh264",
+    "subsystem": "thirdparty",
+    "syscap": [],
+    "features": [],
+    "adapted_system_type": ["standard"],
+    "rom": "",
+    "ram": "",
+    "deps": {
+      "third_party": [
+        "glib",
+        "gstreamer"
+      ],
+      "components": []
+    },
+    "build": {
+      "sub_component": [],
+      "inner_kits": [],
+      "test": []
+    }
+  }
+}
