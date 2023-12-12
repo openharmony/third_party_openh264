@@ -1,7 +1,7 @@
 {
   "name": "@ohos/openh264",
   "description": "Library which supports H.264 encoding and decoding",
-  "version": "2.4.1",
+  "version": "3.1",
   "license": "BSD 2-clause 'Simplified' License",
   "publishAs": "code-segment",
   "segment": {
@@ -19,8 +19,8 @@
     "syscap": [],
     "features": [],
     "adapted_system_type": ["standard"],
-    "rom": "",
-    "ram": "",
+    "rom": "92KB",
+    "ram": "~200KB",
     "deps": {
       "third_party": [
         "glib",
