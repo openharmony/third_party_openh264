@@ -1,5 +1,5 @@
 project('openh264', ['c', 'cpp'],
-  version : '2.3.1',
+  version : '2.4.0',
   meson_version : '>= 0.52',
   default_options : [ 'warning_level=1',
                       'buildtype=debugoptimized' ])
@@ -88,13 +88,13 @@ if ['linux', 'android', 'ios', 'darwin'].contains(system)
     casm_inc = include_directories(join_paths('codec', 'common', 'arm64'))
   elif cpu_family == 'loongarch32'
     asm_format = asm_format32
-    add_project_arguments('-mlsx', '-mlasx', language: 'c')
+    add_project_arguments('-mlsx', '-DHAVE_LSX', '-mlasx', '-DHAVE_LASX', language: 'c')
     add_project_arguments('-DHAVE_LSX', '-DHAVE_LASX', language: 'cpp')
     casm_inc = include_directories(join_paths('codec', 'common', 'loongarch'))
   elif cpu_family == 'loongarch64'
     asm_format = asm_format64
-    add_project_arguments('-mlsx', '-mlasx', language: 'c')
-    add_project_arguments('-mlsx', '-DHAVE_LSX', '-mlasx', '-DHAVE_LASX', language: 'cpp')
+    add_project_arguments('-mlsx', '-DHAVE_LSX', '-mlasx', '-DHAVE_LASX', language: 'c')
+    add_project_arguments('-DHAVE_LSX', '-DHAVE_LASX', language: 'cpp')
     casm_inc = include_directories(join_paths('codec', 'common', 'loongarch'))
   else
     error('FIXME: unhandled CPU family @0@ for @1@'.format(cpu_family, system))
@@ -165,7 +165,7 @@ elif system == 'windows'
   elif cpu_family == 'aarch64'
     # For ARM64, Clang can build the assembly as-is without needing to use
     # either gas-preprocessor or armasm64.
-    if cpp.get_argument_syntax() == 'msvc'
+    if cpp.get_argument_syntax() == 'msvc' and (cpp.get_id() != 'clang-cl' or meson.version().version_compare('<0.58.0'))
       use_asm_gen = true
       gasprep = find_program('gas-preprocessor.pl')
       asm_gen = generator(gasprep,
